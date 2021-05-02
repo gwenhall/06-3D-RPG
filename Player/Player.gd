@@ -31,7 +31,7 @@ func _physics_process(_delta):
 	$AnimationTree.set("parameters/Idle_Run/blend_amount", current_speed/max_speed)
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
-	if Input.is_action_just_pressed("shoot") and target != null:
+	if Input.is_action_just_pressed("shoot") and target != null and target.is_in_group("target"):
 		target.die()
 
 func _input(event):

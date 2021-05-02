@@ -22,7 +22,7 @@ emission_on_uv2 = false
 [node name="Game" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.000954702, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1626, 0.392326, -65.7251 )
 script = ExtResource( 2 )
 
 [node name="Pivot" type="Position3D" parent="Player"]
@@ -50,4 +50,20 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0.00742483, -0.0560093, 0.0064
 
 [node name="Target" parent="Target_Container" instance=ExtResource( 4 )]
 transform = Transform( 0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -27, 4, 9 )
+script = ExtResource( 6 )
+
+[node name="Target2" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( 0.87998, 0, -0.47501, 0, 1, 0, 0.47501, 0, 0.87998, -37.484, 2.26898, -19.7814 )
+script = ExtResource( 6 )
+
+[node name="Target3" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( 0.689179, 0.0725875, -0.720946, 0.12557, 0.967951, 0.217494, 0.713628, -0.240422, 0.657976, -20.885, 2.26898, -24.8423 )
+script = ExtResource( 6 )
+
+[node name="Target4" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( 0.620956, 0, -0.783845, 0, 1, 0, 0.783845, 0, 0.620956, -1.00316, 3.32742, -20.9547 )
+script = ExtResource( 6 )
+
+[node name="Target5" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( -0.936635, 0, -0.350306, 0, 1, 0, 0.350306, 0, -0.936635, 5.91607, 3.02358, -3.50575 )
 script = ExtResource( 6 )
