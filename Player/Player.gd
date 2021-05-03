@@ -52,3 +52,6 @@ func get_input():
 		input_dir += Camera.global_transform.basis.x
 	input_dir = input_dir.normalized()
 	return input_dir
+
+func damage():
+	get_node("/root/Game/UI").add_damage(0.5)

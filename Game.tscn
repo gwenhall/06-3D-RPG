@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://UI/Dialogue.gd" type="Script" id=9]
 [ext_resource path="res://UI/UI.gd" type="Script" id=10]
 [ext_resource path="res://Assets/bird_sound.wav" type="AudioStream" id=11]
+[ext_resource path="res://Drone/Drone.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SphereMesh" id=1]
 radius = 0.5
@@ -54,6 +55,11 @@ material/0 = SubResource( 2 )
 [node name="lowpoly_scene" parent="." instance=ExtResource( 3 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0.00742483, -0.0560093, 0.00644302 )
 
+[node name="Drone_container" type="Spatial" parent="."]
+
+[node name="Drone" parent="Drone_container" instance=ExtResource( 12 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 20, 100 )
+
 [node name="Target_Container" type="Spatial" parent="."]
 
 [node name="Target" parent="Target_Container" instance=ExtResource( 4 )]
@@ -89,6 +95,14 @@ shape = SubResource( 3 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource( 10 )
+
+[node name="Damage" type="ColorRect" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="ColorRect" parent="UI"]
 anchor_right = 1.0
